@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // TODO: Add login logic
-    alert("Logged in!");
+    // TODO: Add actual login logic later (API/Firebase)
+    navigate("/dashboard"); // ✅ Redirect after login
   };
 
   return (
